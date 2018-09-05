@@ -1,2 +1,2 @@
 # Flux2Redux
-A todolist based on flux/redux/react-redux。
+A simple app based on flux/redux/react-redux。
