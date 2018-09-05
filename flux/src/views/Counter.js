@@ -17,6 +17,7 @@ class Counter extends React.Component{
   }
   render(){
     var buttonStyle = {margin:'10px'};
+    console.log('render:' + this.props.caption);
     return(
       <div>
         <button style={buttonStyle} onClick={this.addCount}>+</button>
@@ -24,6 +25,10 @@ class Counter extends React.Component{
         <span>{this.props.caption} count: {this.state.count}</span>
       </div>
     );
+  }
+  shouldComponentUpdate(nextProps,nextState){// 避免冗余渲染
+    return (nextProps.caption !== this.props.caption) ||
+      (nextState.count !== this.state.count);
   }
   componentDidMount(){
     CounterStore.addChangeListener(this.onChange);
