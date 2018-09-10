@@ -24,5 +24,8 @@ Dispatcher.dispatch(action)->callback(action)->changeStore(register ReactCompone
 3.unsubscribe: 销毁回调。<br/> 
 4.getState：获取 store 中存储的 state。<br/> 
 5.replaceReducer：替换 reducer。<br/> 
+**导入 store 的方式：**<br/>
+1.导入 store 文件。<br/>
+2.将 store 放置在顶层组件的 context 中。(Provider)<br/>
 **缺点：**<br/>
 一旦 store 数据发生改变，subscribe 注册的所有回调都会触发。<br/>
