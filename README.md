@@ -1,17 +1,14 @@
 # Flux2Redux
 A simple app based on flux/redux/react-redux。
-
 ### Flux:<br/>
 **特点：**<br/>
 action 的发布和 store 的绑定，都需要用到 dispatcher ，可以说 dipatcher 是 flux 的核心。<br/>
 **数据流：**<br/>
 Dispatcher.dispatch(action)->callback(action)->changeStore(register ReactComponent render)<br/>
 在真正应用时，在view层调用Action中的action构造函数，创建一个相应类型的action并发送到全局Dispatcher中，Dispatcher将该action分发到**所有**Store注册的**所有**回调函数中。<br/>
-<br/>
 **缺点：**<br/>
 1.reducer 处理逻辑和 store 数据混合在一起。<br/>
 2.需要手动在 store 上注册重新渲染的回调函数。<br/> 
-<br/> 
 ### Redux:<br/> 
 **特点：**<br/>
 1.全局只有一个 Store，且 reducer 与 store 分离。<br/> 
