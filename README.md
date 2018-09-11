@@ -26,3 +26,9 @@ Dispatcher.dispatch(action)->callback(action)->changeStore(register ReactCompone
 2.将 store 放置在顶层组件的 context 中。(Provider)<br/>
 **缺点：**<br/>
 一旦 store 数据发生改变，subscribe 注册的所有回调都会触发。<br/>
+### react-redux:<br/> 
+**特点：**<br/>
+1.在 React 环境下对 Redux 操作做的优化。<br/> 
+2.将 Store 存放在顶层组件 Provider 的 context 上，利用 connect 高阶函数，增强需要 Store 对象的子组件。<br/> 
+3.不再需要手动注册重新渲染组件的相关回调函数。<br/> 
+注：该库只是对 redux 操作的优化，仍需依赖 redux 库。<br/> 
